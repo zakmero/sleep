@@ -1,4 +1,4 @@
-import{u as s,j as e,L as o}from"./index-KY8T4iXL.js";const n=()=>{const{id:i}=s(),t={title:"The Dopamine Reset: Escaping the Digital Loop",date:"Feb 16, 2026",category:"Mindset",content:`
+import{u as s,j as e,L as o}from"./index-TAR5jUsB.js";const n=()=>{const{id:i}=s(),t={title:"The Dopamine Reset: Escaping the Digital Loop",date:"Feb 16, 2026",category:"Mindset",content:`
             <p>Modern society is designed to keep you in a state of constant, low-level stimulation. From the infinite scroll of social media to the engineered flavors of processed food, your dopamine system is being hijacked.</p>
             <p>Smart Adulting requires you to take back control of your neurochemistry. When you are constantly chasing the next 'hit', you lose the ability to focus on long-term goals - like building wealth or mastering your health.</p>
             <h3>The 30-Day Protocol</h3>
