@@ -49,7 +49,7 @@ const VSLPage = () => {
                         Fall asleep in under <span style={{ position: 'relative', display: 'inline-flex', justifyContent: 'center' }}>
                             <span style={{ position: 'relative', zIndex: 1 }}>15 minutes</span>
                             <div style={{ position: 'absolute', left: '0', bottom: '-24px', width: '100%', height: '40px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none', zIndex: 0 }}>
-                                <img src="/underline-thin.png" alt="marker" style={{ width: '95%', height: 'auto', filter: 'invert(65%) sepia(85%) saturate(3015%) hue-rotate(345deg) brightness(101%) contrast(97%) drop-shadow(0 2px 4px rgba(251, 146, 60, 0.4))' }} />
+                                <img src="./underline-thin.png" alt="marker" style={{ width: '95%', height: 'auto', filter: 'invert(65%) sepia(85%) saturate(3015%) hue-rotate(345deg) brightness(101%) contrast(97%) drop-shadow(0 2px 4px rgba(251, 146, 60, 0.4))' }} />
                             </div>
                         </span> <br />
                         and wake up earlier without <span style={{ color: '#fca658' }}>fighting your mind.</span>
@@ -135,7 +135,7 @@ const VSLPage = () => {
                     <p style={{ fontSize: '0.65rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', textAlign: 'center', marginBottom: '1.5rem' }}>Research-Backed Methods From</p>
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem', opacity: 0.4 }}>
                         {['nih', 'harvard', 'oxford', 'stanford'].map(l => (
-                            <img key={l} src={`/${l}.png`} alt={l} style={{ height: l === 'harvard' ? '28px' : '22px' }} />
+                            <img key={l} src={`./${l}.png`} alt={l} style={{ height: l === 'harvard' ? '28px' : '22px' }} />
                         ))}
                     </div>
                 </div>

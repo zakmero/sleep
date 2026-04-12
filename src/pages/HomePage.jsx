@@ -16,7 +16,7 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div className="hero-image-container">
-                    <img src="/hero-avatar.png" alt="Performance Strategy" className="hero-character-img" />
+                    <img src="./hero-avatar.png" alt="Performance Strategy" className="hero-character-img" />
                 </div>
             </section>
 
@@ -66,7 +66,7 @@ const HomePage = () => {
             {/* Founder Section */}
             <section className="authority-section" style={{ padding: '6rem 2rem' }}>
                 <div className="author-image-container">
-                    <img src="/founder-avatar.png" alt="The Architect" className="author-img" />
+                    <img src="./founder-avatar.png" alt="The Architect" className="author-img" />
                 </div>
                 <div className="authority-content">
                     <h2 style={{ color: 'var(--text-light)', marginBottom: '0.5rem', fontSize: '2.8rem' }}>The Architect.</h2>
