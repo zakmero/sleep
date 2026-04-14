@@ -17,20 +17,23 @@
 
   <!-- Start Single Page Apps for GitHub Pages -->
   <script type="text/javascript">
+    // 404.html redirects here with ?p=/the/path
+    // This script restores the original path so React Router works correctly.
     (function(l) {
-      if (l.search[1] === '/' ) {
-        var decoded = l.search.slice(1).split('&').map(function(s) { 
-          return s.replace(/~and~/g, '&')
-        }).join('?');
-        window.history.replaceState(null, null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-        );
+      var params = new URLSearchParams(l.search);
+      var p = params.get('p');
+      if (p) {
+        // Rebuild query string without the ?p= param
+        params.delete('p');
+        var qs = params.toString();
+        var newUrl = l.pathname + p + (qs ? '?' + qs : '') + l.hash;
+        window.history.replaceState(null, null, newUrl);
       }
-    }(window.location))
+    }(window.location));
   </script>
   <!-- End Single Page Apps for GitHub Pages -->
-  <script type="module" crossorigin src="/assets/index-CCMwDWrF.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-Bj_70UoL.css">
+  <script type="module" crossorigin src="/assets/index-6l4iTke7.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BKs_1pRv.css">
 </head>
 
 <body>
