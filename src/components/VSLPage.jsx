@@ -45,7 +45,7 @@ const VSLPage = () => {
                 )}
 
                 <div style={{ textAlign: 'center', marginBottom: '2.5rem', marginTop: '1rem' }}>
-                    <h2 className="vsl-headline" style={{ fontSize: '2.5rem', marginBottom: '1.5rem', lineHeight: '1.3', color: '#fff', fontWeight: '800', letterSpacing: '-0.02em', maxWidth: '900px', margin: '0 auto 1.5rem auto' }}>
+                    <h2 className="vsl-headline" style={{ fontSize: isLandingRoute ? 'clamp(2.05rem, 7vw, 2.5rem)' : '2.5rem', marginBottom: '1.5rem', lineHeight: '1.3', color: '#fff', fontWeight: '800', letterSpacing: '-0.02em', maxWidth: '900px', margin: '0 auto 1.5rem auto' }}>
                         Fall asleep in under <span style={{ position: 'relative', display: 'inline-flex', justifyContent: 'center' }}>
                             <span style={{ position: 'relative', zIndex: 1 }}>15 minutes</span>
                             <div style={{ position: 'absolute', left: '0', bottom: '-24px', width: '100%', height: '40px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none', zIndex: 0 }}>
