@@ -26,7 +26,7 @@
         // Rebuild query string without the ?p= param
         params.delete('p');
         var qs = params.toString();
-        var newUrl = l.pathname + p + (qs ? '?' + qs : '') + l.hash;
+        var newUrl = p + (qs ? '?' + qs : '') + l.hash;
         window.history.replaceState(null, null, newUrl);
       }
     }(window.location));
