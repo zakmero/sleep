@@ -1,11 +1,9 @@
-import React, { lazy, Suspense } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const VSLPage = () => {
-    const navigate = useNavigate();
     const location = useLocation();
-    const isLandingRoute = location.pathname === '/landing';
-    const email = localStorage.getItem('user_email');
+    const normalizedPath = location.pathname.replace(/\/+$/, '') || '/';
+    const isLandingRoute = normalizedPath === '/landing';
     const quizReport = localStorage.getItem('quiz_result_text');
     const quizTitle = localStorage.getItem('quiz_result_title');
     
@@ -49,10 +47,10 @@ const VSLPage = () => {
                         Fall asleep in under <span style={{ position: 'relative', display: 'inline-flex', justifyContent: 'center' }}>
                             <span style={{ position: 'relative', zIndex: 1 }}>15 minutes</span>
                             <div style={{ position: 'absolute', left: '0', bottom: '-24px', width: '100%', height: '40px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none', zIndex: 0 }}>
-                                <img src="./underline-thin.png" alt="marker" style={{ width: '95%', height: 'auto', filter: 'invert(65%) sepia(85%) saturate(3015%) hue-rotate(345deg) brightness(101%) contrast(97%) drop-shadow(0 2px 4px rgba(251, 146, 60, 0.4))' }} />
+                                <img className="vsl-underline-marker" src="/underline-thin.png" alt="marker" style={{ width: '95%', height: 'auto', filter: 'invert(65%) sepia(85%) saturate(3015%) hue-rotate(345deg) brightness(101%) contrast(97%) drop-shadow(0 2px 4px rgba(251, 146, 60, 0.4))' }} />
                             </div>
                         </span> <br />
-                        and wake up earlier without <span style={{ color: '#fca658' }}>fighting your mind.</span>
+                        and wake up earlier without <span className="vsl-accent-text" style={{ color: '#fca658' }}>fighting your mind.</span>
                     </h2>
                     <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', maxWidth: '650px', margin: '0 auto', lineHeight: '1.6' }}>
                         So you can finally feel rested, and stop dragging through your days.
@@ -67,33 +65,20 @@ const VSLPage = () => {
             <div className="content-box glass-card wide-card" style={{ padding: '2rem' }}>
                 {renderHeadline()}
 
-                <div style={{
-                    background: '#fca658',
-                    color: '#000',
-                    padding: '0.4rem 1rem',
-                    textAlign: 'center',
-                    fontWeight: '700',
-                    fontSize: '0.85rem',
-                    marginBottom: '4px',
-                    borderRadius: '6px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '8px',
-                    width: 'fit-content',
-                    margin: '0 auto 4px auto'
+                <div className="video-placeholder" style={{
+                    padding: 0,
+                    overflow: 'hidden',
+                    background: 'transparent',
+                    borderRadius: 0,
+                    border: 'none',
+                    marginBottom: '3rem'
                 }}>
-                    <svg width="18" height="14" viewBox="0 0 28 20" fill="none" style={{ flexShrink: 0, color: '#000' }}>
-                        <rect width="28" height="20" rx="4" fill="currentColor" />
-                        <path d="M11 6L18 10L11 14V6Z" fill="#fca658" />
-                    </svg>
-                    <span style={{ lineHeight: '1' }}>Watch This short video Below To Discover How this system works!</span>
+                    <img
+                        src="/offer-vsl-final-dark-edge.png"
+                        alt="Core Sleep Architecture system preview"
+                        style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
+                    />
                 </div>
-
-                <div className="video-placeholder" style={{ padding: 0, overflow: 'hidden', background: '#000', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                    <iframe src="https://player.vimeo.com/video/1181905188?title=0&byline=0&portrait=0" width="100%" height="100%" frameBorder="0" allow="autoplay; fullscreen" title="VSL Video"></iframe>
-                </div>
-                <p style={{ textAlign: 'center', marginTop: '-1rem', marginBottom: '3rem', opacity: 0.5, fontSize: '0.8rem' }}>few minutes</p>
 
                 <div className="offer-details">
                     <h2 style={{ marginBottom: '2rem' }}>Inside Core Sleep Architecture</h2>
@@ -135,7 +120,7 @@ const VSLPage = () => {
                     <p style={{ fontSize: '0.65rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', textAlign: 'center', marginBottom: '1.5rem' }}>Research-Backed Methods From</p>
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem', opacity: 0.4 }}>
                         {['nih', 'harvard', 'oxford', 'stanford'].map(l => (
-                            <img key={l} src={`./${l}.png`} alt={l} style={{ height: l === 'harvard' ? '28px' : '22px' }} />
+                            <img key={l} src={`/${l}.png`} alt={l} style={{ height: l === 'harvard' ? '28px' : '22px' }} />
                         ))}
                     </div>
                 </div>
