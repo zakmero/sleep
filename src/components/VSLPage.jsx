@@ -15,7 +15,7 @@ const VSLPage = () => {
 
     const handleBuy = () => {
         localStorage.setItem('user_choice', 'buy_offer');
-        window.location.href = "https://smartadulting.gumroad.com/l/dzxwgk";
+        window.location.href = "https://whop.com/smart-adulting/core-sleep-architecture/";
     };
 
     // Shared Header Block
@@ -113,7 +113,7 @@ const VSLPage = () => {
                     <button onClick={handleBuy} className="cta-button primary-btn pulse-anim" style={{ padding: '1.2rem 2.5rem', fontSize: '1.2rem' }}>
                         Install Core Sleep Architecture
                     </button>
-                    <p style={{ marginTop: '1rem', opacity: 0.5, fontSize: '0.8rem' }}>Secure Checkout via Gumroad</p>
+                    <p style={{ marginTop: '1rem', opacity: 0.5, fontSize: '0.8rem' }}>Secure Checkout via Whop</p>
                 </div>
 
                 <div style={{ marginTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1.5rem' }}>

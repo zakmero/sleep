@@ -166,7 +166,7 @@ const BlogPostPage = () => {
           <h3>Need a Complete Sleep System?</h3>
           <p>Explore the full system here</p>
           <a
-            href="https://smartadulting.gumroad.com/l/Coresleeparchitecture"
+            href="https://whop.com/smart-adulting/core-sleep-architecture/"
             className="cta-button primary-btn"
             target="_blank"
             rel="noopener noreferrer"
