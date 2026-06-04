@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /vault-74c2f1
+
+Sitemap: https://smartadulting.com/sitemap.xml

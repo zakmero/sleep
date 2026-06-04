@@ -2,14 +2,16 @@
   "name": "sleep",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://zakmero.github.io/sleep/",
+  "homepage": "https://smartadulting.com",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/generate-sitemap.mjs",
     "build": "vite build",
+    "postbuild": "node scripts/generate-static-route-pages.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "node scripts/sync-live-posts.mjs && npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
